@@ -86,9 +86,9 @@ $(function(){
                     success: function(response) {
                         for (i=0;i<response.length;i++){
                             if (response[i].name.toLowerCase().includes(searchbarDiv.toLowerCase())){
-                                del.remove()
                                 searchResults.removeClass('hidden')
                                 let tempDiv = `<li class="search-out">${response[i].name}</li>`;
+                                del.remove()
                                 searchResults.append(tempDiv);
                             };
                         }

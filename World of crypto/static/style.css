@@ -22,15 +22,6 @@ body {
     left: 0;
     top: 50%;
 }
-#crypto-gif {
-    position: relative;
-    margin: 0 auto;
-    width: 60vw;
-    height: fit-content;
-    opacity: 0.5;
-    right: -22%;
-    top: 10%;
-}
 
 /* width */
 body::-webkit-scrollbar {
@@ -178,8 +169,7 @@ body::-webkit-scrollbar {
 #heading p {
     color: antiquewhite;
     height: 5px;
-    width: 23%;
-    padding-left: 40px;
+    width: 550px;
 }
 
 .crypto-heading {
@@ -188,8 +178,8 @@ body::-webkit-scrollbar {
     background-color: #4b001e;
     color: black;
     z-index: 3;
-    width: 100%;
     margin-top: 30px;
+    padding-left: 40px;
 }
 
 /* LATEST NEWS DIV */
@@ -290,6 +280,7 @@ a h2 {
 
 .invest-box div a {
     font-size: 40px;
+    color: antiquewhite;
 }
 
 .invest-box div:hover {
