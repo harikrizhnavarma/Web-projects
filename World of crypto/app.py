@@ -17,5 +17,10 @@ def scrape_news():
     response = cr_scrape.scrape_news()
     return response
 
+@app.route("/getcryptomines")
+def scrape_mines():
+    response = cr_scrape.scrape_mines()
+    return response
+
 if __name__ == "__main__":
     app.run(debug=True)

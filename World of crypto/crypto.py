@@ -60,3 +60,29 @@ class CryptoScraper:
             else:
                 continue
         return news_list
+
+    def scrape_mines():
+
+        url = "https://minershop.fr/shop/"
+        html_text = requests.get(url).text
+        soup = BeautifulSoup(html_text, "lxml")
+
+        mine_list = []
+        ul_tag = soup.find("ul", class_="products")
+        li_tags = ul_tag.find_all("li", class_="product")
+        for li in li_tags:
+            link = li.find("a")
+            img = link.find("img")['src']
+            title = link.find("h2").text
+            price = link.find("span", class_="price").span.text
+            mine_list.append({
+                "url": link['href'],
+                "img": img,
+                "title": title,
+                "price": price
+            })
+        
+        return mine_list
+
+
+CryptoScraper.scrape_mines()
