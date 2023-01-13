@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 @app.route("/", methods=["GET"])
 def home_page():
-    return render_template("main.html", title = "Home Page")
+    return render_template("index.html", title = "Home Page")
 
 @app.route("/getcryptoinfo")
 def scrape_coin():
