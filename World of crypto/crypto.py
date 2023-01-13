@@ -83,6 +83,3 @@ class CryptoScraper:
             })
         
         return mine_list
-
-
-CryptoScraper.scrape_mines()
